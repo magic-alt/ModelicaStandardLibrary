@@ -9,7 +9,7 @@ package ModelicaServices "ModelicaServices (Default implementation) - Models and
     class ReleaseNotes "Release notes"
       extends Modelica.Icons.ReleaseNotes;
       annotation (Documentation(info="<html>
-<h4>Version 4.0.0, 2020-03-11</h4>
+<h4>Version 4.0.0, 2020-06-04</h4>
 
 <ul>
 <li> New animation visualizer
@@ -234,8 +234,8 @@ Specification (version &ge; 3.3).
   annotation (
     preferredView="info",
     version="4.0.0",
-    versionDate="2020-03-11",
-    dateModified = "2020-03-11 19:00:00Z",
+    versionDate="2020-06-04",
+    dateModified = "2020-06-04 11:00:00Z",
     revisionId="$Format:%h %ci$",
     uses(Modelica(version="4.0.0")),
     conversion(
@@ -262,6 +262,11 @@ These are:
      provides a 3-dim. visualization of
      moveable parameterized surface. It is used in
 <a href=\"modelica://Modelica.Mechanics.MultiBody.Visualizers.Advanced.Surface\">Modelica.Mechanics.MultiBody.Visualizers.Advanced.Surface</a>
+     via inheritance.</li>
+
+<li> <a href=\"modelica://ModelicaServices.Animation.Vector\">Animation.Vector</a>
+     provides a 3-dim. visualization of vector quantities. It is used in
+<a href=\"modelica://Modelica.Mechanics.MultiBody.Visualizers.Advanced.Arrow\">Modelica.Mechanics.MultiBody.Visualizers.Advanced.Arrow</a>, <a href=\"modelica://Modelica.Mechanics.MultiBody.Visualizers.Advanced.DoubleArrow\">Modelica.Mechanics.MultiBody.Visualizers.Advanced.DoubleArrow</a> and <a href=\"modelica://Modelica.Mechanics.MultiBody.Visualizers.FixedArrow\">Modelica.Mechanics.MultiBody.Visualizers.FixedArrow</a>
      via inheritance.</li>
 
 <li> <a href=\"modelica://ModelicaServices.ExternalReferences.loadResource\">ExternalReferences.loadResource</a>

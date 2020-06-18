@@ -2350,7 +2350,7 @@ more of the following changes.
 </html>"));
 end VersionManagement;
 
-class Version_4_0_0 "Version 4.0.0 (March 11, 2020)"
+class Version_4_0_0 "Version 4.0.0 (June 4, 2020)"
   extends Modelica.Icons.ReleaseNotes;
 
   annotation (Documentation(info="<html>
@@ -2360,7 +2360,7 @@ A tested conversion script is provided to transform models and libraries of prev
 Short Overview:
 </p>
 <ul>
-<li>About <a href=\"modelica://Modelica/Resources/Documentation/Version-4.0.0/ResolvedGitHubIssues.html\">603 issues (including pull requests)</a> have been addressed for this release.</li>
+<li>About <a href=\"modelica://Modelica/Resources/Documentation/Version-4.0.0/ResolvedGitHubIssues.html\">649 issues (including 432 pull requests)</a> have been addressed for this release.</li>
 <li>This version is based on the recent Modelica language standard version 3.4.</li>
 <li>The library version (i.e., \"4.0.0\") follows semantic versioning using the convention <code>MAJOR.MINOR.BUGFIX</code>
 (see <a href=\"modelica://Modelica.UsersGuide.ReleaseNotes.VersionManagement\">Version Management</a> for details)
@@ -2375,10 +2375,156 @@ Short Overview:
   </ol></li>
 <li>The licenses of the utilized open-source third-party software components as well as the BSD 3-clause license of the Modelica Standard Library itself are available as separate <a href=\"modelica://Modelica/Resources/Licenses\">resources</a>.</li>
 </ul>
+
 <p>
 The exact difference between package Modelica version 4.0.0 and version 3.2.3 is
 summarized in a <a href=\"modelica://Modelica/Resources/Documentation/Version-4.0.0/DifferencesTo323.html\">comparison table</a>.
 </p>
+
+<p>
+The following <font color=\"blue\"><strong>Modelica packages</strong></font> have been tested that they work together with this release of package Modelica
+(alphabetical list).
+Hereby simulation results of the listed packages have been produced with package Modelica version 3.2.3 and
+compared with the simulation results produced with version 4.0.0 Beta.1. The tests have been performed with Dymola 2020/2020x/2021:
+</p>
+
+<table border=\"1\" cellspacing=\"0\" cellpadding=\"2\">
+  <tr>
+    <th>Library</th>
+    <th>Version</th>
+    <th>Library provider</th>
+  </tr>
+  <tr>
+    <td><a href=\"https://github.com/lbl-srg/modelica-buildings/issues/1789\">Buildings</a></td>
+    <td>&nbsp;&gt;&nbsp;6.0.0</td>
+    <td>LBNL</td>
+  </tr>
+  <tr>
+    <td>BrushlessDCDrives</td>
+    <td>1.1.1</td>
+    <td>Dassault Syst&egrave;mes</td>
+  </tr>
+  <tr>
+    <td>Clara</td>
+    <td>1.5.0</td>
+    <td>XRG Simulation GmbH and TLK-Thermo GmbH</td>
+  </tr>
+  <tr>
+    <td>ClaraPlus</td>
+    <td>1.3.0</td>
+    <td>XRG Simulation GmbH and TLK-Thermo GmbH</td>
+  </tr>
+  <tr>
+    <td>DriveControl</td>
+    <td>4.0.0</td>
+    <td>Anton Haumer</td>
+  </tr>
+  <tr>
+    <td>DymolaModels</td>
+    <td>1.1</td>
+    <td>Dassault Syst&egrave;mes</td>
+  </tr>
+  <tr>
+    <td>EDrives</td>
+    <td>1.0.1</td>
+    <td>Anton Haumer and Christian Kral</td>
+  </tr>
+  <tr>
+    <td>ElectricalMachines</td>
+    <td>0.9.1</td>
+    <td>Anton Haumer</td>
+  </tr>
+  <tr>
+    <td>ElectricPowerSystems</td>
+    <td>1.3.1</td>
+    <td>Dassault Syst&egrave;mes</td>
+  </tr>
+  <tr>
+    <td>ElectrifiedPowertrains</td>
+    <td>1.3.2</td>
+    <td>Dassault Syst&egrave;mes</td>
+  </tr>
+  <tr>
+    <td>ElectroMechanicalDrives</td>
+    <td>2.2.0</td>
+    <td>Christian Kral</td>
+  </tr>
+  <tr>
+    <td>EMOTH</td>
+    <td>1.4.1</td>
+    <td>Anton Haumer</td>
+  </tr>
+  <tr>
+    <td>HanserModelica</td>
+    <td>1.1.0</td>
+    <td>Christian Kral</td>
+  </tr>
+  <tr>
+    <td>IBPSA</td>
+    <td>&nbsp;&gt;&nbsp;3.0.0</td>
+    <td>IBPSA Project 1</td>
+  </tr>
+  <tr>
+    <td>KeywordIO</td>
+    <td>0.9.0</td>
+    <td>Christian Kral</td>
+  </tr>
+  <tr>
+    <td>Modelica_DeviceDrivers</td>
+    <td>1.8.1</td>
+    <td>DLR, ESI ITI, and Linköping University (PELAB)</td>
+  </tr>
+  <tr>
+    <td>Optimization</td>
+    <td>2.2.4</td>
+    <td>DLR</td>
+  </tr>
+  <tr>
+    <td>PhotoVoltaics</td>
+    <td>1.6.0</td>
+    <td>Christian Kral</td>
+  </tr>
+  <tr>
+    <td>PlanarMechanics</td>
+    <td>1.4.1</td>
+    <td>Dirk Zimmer</td>
+  </tr>
+  <tr>
+    <td>Testing</td>
+    <td>1.3</td>
+    <td>Dassault Syst&egrave;mes</td>
+  </tr>
+  <tr>
+    <td>ThermalSystems</td>
+    <td>1.6.0</td>
+    <td>TLK-Thermo GmbH</td>
+  </tr>
+  <tr>
+    <td>TIL</td>
+    <td>3.9.0</td>
+    <td>TLK-Thermo GmbH</td>
+  </tr>
+  <tr>
+    <td>TILMedia</td>
+    <td>3.9.0</td>
+    <td>TLK-Thermo GmbH</td>
+  </tr>
+  <tr>
+    <td>TSMedia</td>
+    <td>1.6.0</td>
+    <td>TLK-Thermo GmbH</td>
+  </tr>
+  <tr>
+    <td>VehicleInterfaces</td>
+    <td>1.2.5</td>
+    <td>Modelica Association</td>
+  </tr>
+  <tr>
+    <td>WindPowerPlants</td>
+    <td>1.2.0</td>
+    <td>Christian Kral</td>
+  </tr>
+</table>
 
 <p><br>
 The following <font color=\"blue\"><strong>new libraries</strong></font> have been added:
@@ -2426,7 +2572,7 @@ The following <font color=\"blue\"><strong>new components</strong></font> have b
     <td>Added circumferential flux models of hollow cylinder and toroid with circular cross section.</td></tr>
 <tr><td colspan=\"2\"><strong>Modelica.Mechanics.MultiBody.Visualizers.Advanced</strong></td></tr>
 <tr><td>Vector</td>
-    <td></td></tr>
+    <td>Added 3-dimensional animation for visualization of vector quantities (force, torque, etc.)</td></tr>
 <tr><td colspan=\"2\"><strong>Modelica.Mechanics.Translational.Components</strong></td></tr>
 <tr><td>RollingResistance</td>
     <td>Added resistance of a rolling wheel incorporating the inclination and rolling resistance coefficient.</td></tr>
@@ -2471,12 +2617,18 @@ The following <font color=\"blue\"><strong>existing components</strong></font> h
 
 <table border=\"1\" cellspacing=\"0\" cellpadding=\"2\" style=\"border-collapse:collapse;\">
 <tr><td colspan=\"2\"><strong>Modelica.Blocks</strong></td></tr>
-<tr><td>Nonlinear.Limiter<br>Nonlinear.VariableLimiter<br>Continuous.LimPID</td>
+<tr><td>Nonlinear.Limiter<br>Nonlinear.VariableLimiter</td>
     <td>The superfluous parameter <code>limitsAtInit</code> has been removed.</td></tr>
+<tr><td>Continuous.PID</td>
+    <td>The initialization option <code>initType</code>&nbsp;=&nbsp;<code>InitPID.DoNotUse_InitialIntegratorState</code> to only initialize the integrator state has been removed. This option has been converted to both initialize the integrator state and the derivative state, i.e., <code>initType</code>&nbsp;=&nbsp;<code>Init.InitialState</code>.</td></tr>
+<tr><td>Continuous.LimPID</td>
+    <td>The superfluous parameter <code>limitsAtInit</code> has been removed.<br>The initialization option <code>initType</code>&nbsp;=&nbsp;<code>InitPID.DoNotUse_InitialIntegratorState</code> to only initialize the integrator state has been removed. This option has been converted to both initialize the integrator state and the derivative state, i.e., <code>initType</code>&nbsp;=&nbsp;<code>Init.InitialState</code>.</td></tr>
 <tr><td>Nonlinear.DeadZone</td>
     <td>The superfluous parameter <code>deadZoneAtInit</code> has been removed.</td></tr>
 <tr><td>Interfaces.PartialNoise<br>Noise.UniformNoise<br>Noise.NormalNoise<br>Noise.TruncatedNormalNoise<br>Noise.BandLimitedWhiteNoise</td>
     <td>As a side-effect of the updated computation in Modelica.Math.Random.Utilities.automaticLocalSeed the <code>localSeed</code> parameter is computed differently if <code>useAutomaticLocalSeed</code> is set to true.</td></tr>
+<tr><td>Types.InitPID</td>
+    <td>The enumeration type has been converted to <code>Types.Init</code> with exception of the alternative <code>InitPID.DoNotUse_InitialIntegratorState</code>, that was converted to <code>Init.InitialState</code> leading to a different initialization behaviour.</td></tr>
 <tr><td colspan=\"2\"><strong>Modelica.Electrical.Machines.Utilities</strong></td></tr>
 <tr><td>SwitchYD</td>
     <td>The <a href=\"modelica://Modelica.Electrical.Polyphase.Ideal.IdealCommutingSwitch\">IdealCommutingSwitch</a> is replaced by an <a href=\"modelica://Modelica.Electrical.Polyphase.Ideal.IdealOpeningSwitch\">IdealOpeningSwitch</a> and an <a href=\"modelica://Modelica.Electrical.Polyphase.Ideal.IdealClosingSwitch\">IdealClosingSwitch</a> to allow a time delay between the two switching actions.</td></tr>
@@ -2486,13 +2638,41 @@ The following <font color=\"blue\"><strong>existing components</strong></font> h
 <tr><td colspan=\"2\"><strong>Modelica.Magnetic.QuasiStatic.FundamentalWave.Utilities</strong></td></tr>
 <tr><td>SwitchYD</td>
     <td>The <a href=\"modelica://Modelica.Electrical.QuasiStatic.Polyphase.Ideal.IdealCommutingSwitch\">IdealCommutingSwitch</a> is replaced by an <a href=\"modelica://Modelica.Electrical.QuasiStatic.Polyphase.Ideal.IdealOpeningSwitch\">IdealOpeningSwitch</a> and an <a href=\"modelica://Modelica.Electrical.QuasiStatic.Polyphase.Ideal.IdealClosingSwitch\">IdealClosingSwitch</a> to allow a time delay between the two switching actions.</td></tr>
-<tr><td colspan=\"2\"><strong>Modelica.Mechanics.MultiBody</strong></td></tr>
-<tr><td>Joints.Prismatic</td>
+<tr><td colspan=\"2\"><strong>Modelica.Mechanics.MultiBody.Forces</strong></td></tr>
+<tr><td>WorldForce</td>
+    <td>The parameters <code>diameter</code> and <code>N_to_m</code> have been removed.</td></tr>
+<tr><td>WorldTorque</td>
+    <td>The parameters <code>diameter</code> and <code>Nm_to_m</code> have been removed.</td></tr>
+<tr><td>WorldForceAndTorque</td>
+    <td>The parameters <code>forceDiameter</code>, <code>torqueDiameter</code>, <code>N_to_m</code>, and <code>Nm_to_m</code> have been removed.</td></tr>
+<tr><td>Force</td>
+    <td>The parameter <code>N_to_m</code> has been removed.</td></tr>
+<tr><td>Torque</td>
+    <td>The parameter <code>Nm_to_m</code> has been removed.</td></tr>
+<tr><td>ForceAndTorque</td>
+    <td>The parameters <code>N_to_m</code> and <code>Nm_to_m</code> have been removed.</td></tr>
+<tr><td colspan=\"2\"><strong>Modelica.Mechanics.MultiBody.Joints</strong></td></tr>
+<tr><td>Prismatic</td>
     <td>The superfluous constant <code>s_offset</code> has been removed.</td></tr>
-<tr><td>Joints.Revolute</td>
+<tr><td>Revolute</td>
     <td>The superfluous constant <code>phi_offset</code> has been removed.</td></tr>
-<tr><td>Parts.Body</td>
+<tr><td>FreeMotion<br>FreeMotionScalarInit</td>
+    <td>The parameter <code>arrowDiameter</code> has been removed.</td></tr>
+<tr><td colspan=\"2\"><strong>Modelica.Mechanics.MultiBody.Parts</strong></td></tr>
+<tr><td>Body</td>
     <td>The superfluous parameter <code>z_a_start</code> has been removed.</td></tr>
+<tr><td colspan=\"2\"><strong>Modelica.Mechanics.MultiBody.Sensors</strong></td></tr>
+<tr><td>AbsoluteSensor<br>RelativeSensor<br>Distance</td>
+    <td>The parameter <code>arrowDiameter</code> has been removed.</td></tr>
+<tr><td>CutForce</td>
+    <td>The parameters <code>forceDiameter</code> and <code>N_to_m</code> have been removed.</td></tr>
+<tr><td>CutForce</td>
+    <td>The parameters <code>torqueDiameter</code> and <code>Nm_to_m</code> have been removed.</td></tr>
+<tr><td>CutForceAndTorque</td>
+    <td>The parameters <code>forceDiameter</code>, <code>torqueDiameter</code>, <code>N_to_m</code>, and <code>Nm_to_m</code> have been removed.</td></tr>
+<tr><td colspan=\"2\"><strong>Modelica.Mechanics.MultiBody.Visualizers</strong></td></tr>
+<tr><td>Advanced.Arrow<br>Advanced.DoubleArrow<br>FixedArrow<br>SignalArrow</td>
+    <td>The parameter <code>diameter</code> has been removed.</td></tr>
 <tr><td colspan=\"2\"><strong>Modelica.Fluid.Machines</strong></td></tr>
 <tr><td>PartialPump</td>
     <td>The superfluous parameter <code>show_NPSHa</code> has been removed.</td></tr>
@@ -8151,7 +8331,7 @@ main version number is not changed.
 </p>
 
 <table border=\"1\" cellspacing=\"0\" cellpadding=\"2\">
-<tr><td><a href=\"modelica://Modelica.UsersGuide.ReleaseNotes.Version_4_0_0\">Version 4.0.0</a></td><td>March 11, 2020</td></tr>
+<tr><td><a href=\"modelica://Modelica.UsersGuide.ReleaseNotes.Version_4_0_0\">Version 4.0.0</a></td><td>June 4, 2020</td></tr>
 <tr><td><a href=\"modelica://Modelica.UsersGuide.ReleaseNotes.Version_3_2_3\">Version 3.2.3</a></td><td>January 23, 2019</td></tr>
 <tr><td><a href=\"modelica://Modelica.UsersGuide.ReleaseNotes.Version_3_2_2\">Version 3.2.2</a></td><td>April 3, 2016</td></tr>
 <tr><td><a href=\"modelica://Modelica.UsersGuide.ReleaseNotes.Version_3_2_1\">Version 3.2.1</a></td><td>August 14, 2013</td></tr>
@@ -8745,8 +8925,8 @@ end UsersGuide;
 annotation (
 preferredView="info",
 version="4.0.0",
-versionDate="2020-03-11",
-dateModified = "2020-03-11 19:00:00Z",
+versionDate="2020-06-04",
+dateModified = "2020-06-04 11:00:00Z",
 revisionId="$Format:%h %ci$",
 uses(Complex(version="4.0.0"), ModelicaServices(version="4.0.0")),
 conversion(
@@ -8765,9 +8945,9 @@ Icon(coordinateSystem(extent={{-100.0,-100.0},{100.0,100.0}}), graphics={
     fillPattern=FillPattern.Solid,
     extent={{-17.8562,-17.8563},{17.8563,17.8562}})}),
 Documentation(info="<html>
-<p>
+<div>
 <img src=\"modelica://Modelica/Resources/Images/Logos/Modelica_Libraries.svg\" width=\"250\">
-</p>
+</div>
 
 <p>
 The package <strong>Modelica&reg;</strong> is a <strong>standardized</strong> and <strong>free</strong> package
@@ -8781,9 +8961,9 @@ standardized interface definitions. Some typical examples are shown
 in the next figure:
 </p>
 
-<p>
+<div>
 <img src=\"modelica://Modelica/Resources/Images/UsersGuide/ModelicaLibraries.png\">
-</p>
+</div>
 
 <p>
 For an introduction, have especially a look at:
@@ -8804,7 +8984,7 @@ For an introduction, have especially a look at:
 This version of the Modelica Standard Library consists of
 </p>
 <ul>
-<li><strong>1416</strong> component models and blocks,</li>
+<li><strong>1417</strong> component models and blocks,</li>
 <li><strong>512</strong> example models, and</li>
 <li><strong>1219</strong> functions</li>
 </ul>

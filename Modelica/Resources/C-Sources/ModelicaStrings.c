@@ -1,4 +1,4 @@
-/* ModelicaStrings.c - External functions for Modelica.Functions.Strings
+/* ModelicaStrings.c - External functions for Modelica.Utilities.Strings
 
    Copyright (C) 2002-2020, Modelica Association and contributors
    All rights reserved.
@@ -29,7 +29,7 @@
    OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-/* Release Notes:
+/* Changelog:
       Jun. 16, 2017: by Thomas Beutlich, ESI ITI GmbH
                      Utilized hash macros of uthash.h for ModelicaStrings_hashString
                      (ticket #2250)
@@ -93,8 +93,10 @@
 #include "uthash.h"
 #undef uthash_fatal /* Ensure that nowhere in this file uses uthash_fatal by accident */
 
+#if defined(__clang__)
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wtautological-compare"
+#endif
 
 _Ret_z_ const char* ModelicaStrings_substring(_In_z_ const char* string,
                                       int startIndex, int endIndex) {
@@ -553,4 +555,6 @@ int ModelicaStrings_hashString(_In_z_ const char* str) {
     return h.is;
 }
 
+#if defined(__clang__)
 #pragma clang diagnostic pop
+#endif
